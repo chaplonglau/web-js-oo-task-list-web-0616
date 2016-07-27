@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/lib/jquery-2.1.1.min.js"></script>
   <script src="js/lib/underscore.min.js"></script>
+  <script src="js/models/store.js"></script>
   <script src="js/models/list.js"></script>
   <script src="js/models/task.js"></script>
   <script src="js/controllers/lists.controller.js"></script>
@@ -17,13 +18,13 @@
   <div id="wrapper">
     <h1>my task list</h1>
 
-    <form id="add_list" action="#" methos="post">
+    <form id="add_list" action="#" method="post">
       <label for="list_title">Add a new list:</label>
       <input type="text" id="list_title" name="list_title" placeholder="title">
       <input type="submit" value="(+) add">
     </form><!-- #add_list -->
     
-    <form id="add_task" action="#" method="post">
+    <form id="add_task" action="#" method="post" style="display: none">
       <label for="select_list">Select List:</label>
       <select id="select_list" name="select_list"></select>
       <label for="task_description">Task description:</label>

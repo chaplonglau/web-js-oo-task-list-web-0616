@@ -7,6 +7,7 @@ javascripts:
     - js/models/list.js
     - js/controllers/tasks.controller.js
     - js/controllers/lists.controller.js
+    - js/models/store.js
   specs:
     - spec/jasmine-jquery.js
     - spec/spec.helper.js

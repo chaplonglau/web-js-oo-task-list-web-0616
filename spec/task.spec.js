@@ -5,7 +5,7 @@ describe('Task Model', function() {
 
     var list, task;
     beforeEach(function() {
-      emptyArr(List.all); // for deleting instances between tests
+      emptyArr(Store.lists); // for deleting instances between tests
       list = new List('Jon\'s List');
       task = new Task('Walk the dog', 'high', list);
     });

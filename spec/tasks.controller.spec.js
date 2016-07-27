@@ -30,7 +30,7 @@ describe('Tasks Controller', function(){
   describe('#init (note you can always use #init as a delegator...)', function() {
     beforeEach(function(){
       deleteLists(); // deletes any lists and their tasks
-      emptyArr(List.all); // for deleting instances between tests
+      emptyArr(Store.lists); // for deleting instances between tests
       tasksController.init();
       // creates new list
       $('#add_list input:first').val('grocerries');
@@ -83,7 +83,7 @@ describe('Tasks Controller', function(){
 
         it('should remove the task from its list.tasks property and replace it with null', function() {
           $('li[data-id="0"] button').click();
-          expect(List.all[0]['tasks']).toEqual([null]);
+          expect(Store.lists[0]['tasks']).toEqual([null]);
         });
       }); // ends deleting task
 
